@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 // import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 function Todo() {
   const [inputValue, setValue] = useState("");
   const [inputValues, setValues] = useState([]);
+  const [editValue, setEditing] = useState(false);
 
   function handleChange(e) {
     setValue(e.target.value);
@@ -12,7 +14,12 @@ function Todo() {
 
   function handleSumbit(e) {
     e.preventDefault();
-    setValues([...inputValues, inputValue]);
+    if (editValue === false) {
+      setValues([...inputValues, inputValue]);
+    } else {
+      inputValues[editValue] = inputValue;
+      setValues([...inputValues]);
+    }
     setValue("");
   }
 
@@ -23,6 +30,11 @@ function Todo() {
         return index !== itemToDelete;
       })
     );
+  }
+
+  function handleEdit(itemToEdit) {
+    setValue(inputValues[itemToEdit]);
+    setEditing(itemToEdit);
   }
 
   return (
@@ -47,6 +59,7 @@ function Todo() {
                 className="deleteBtn"
                 onClick={() => handleDeletion(index)}
               />
+              <EditIcon className="editBtn" onClick={() => handleEdit(index)} />
             </li>
           );
         })}
