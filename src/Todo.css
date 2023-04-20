@@ -7,3 +7,10 @@
 .deleteBtn {
     color: black;
 }
+
+
+.completed {
+    text-decoration: line-through;
+    color: black;
+    cursor: pointer;;
+  }

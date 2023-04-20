@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-// import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import DoneIcon from "@mui/icons-material/Done";
+import "./Todo.css";
 
 function Todo() {
   const [inputValue, setValue] = useState("");
   const [inputValues, setValues] = useState([]);
   const [editValue, setEditing] = useState(false);
+  const [completedValue, setCompleted] = useState([]);
 
   function handleChange(e) {
     setValue(e.target.value);
@@ -18,13 +20,12 @@ function Todo() {
       setValues([...inputValues, inputValue]);
     } else {
       inputValues[editValue] = inputValue;
-      setValues([...inputValues]);
+      setEditing(false);
     }
     setValue("");
   }
 
   function handleDeletion(itemToDelete) {
-    // console.log(itemToDelete);
     setValues(
       inputValues.filter((value, index) => {
         return index !== itemToDelete;
@@ -35,6 +36,10 @@ function Todo() {
   function handleEdit(itemToEdit) {
     setValue(inputValues[itemToEdit]);
     setEditing(itemToEdit);
+  }
+
+  function handleCompleted(itemCompleted) {
+    setCompleted([...completedValue, itemCompleted]);
   }
 
   return (
@@ -53,13 +58,20 @@ function Todo() {
       <ul>
         {inputValues.map((value, index) => {
           return (
-            <li key={index}>
+            <li
+              className={completedValue.includes(index) ? "completed" : ""}
+              key={index}
+            >
               {value}
               <DeleteIcon
                 className="deleteBtn"
                 onClick={() => handleDeletion(index)}
               />
               <EditIcon className="editBtn" onClick={() => handleEdit(index)} />
+              <DoneIcon
+                className="doneBtn"
+                onClick={() => handleCompleted(index)}
+              />
             </li>
           );
         })}
