@@ -32,7 +32,11 @@ function EcommerceData() {
   }
 
   function trimDescription(desc) {
-    return desc.length > 100 ? desc.slice(0, 100) + "..." : desc;
+    // return desc.length > 100 ? desc.slice(0, 100) + "..." : desc;
+
+    if (desc.length > 100) {
+      return desc.slice(0, 100) + "...";
+    }
   }
 
   return (
