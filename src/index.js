@@ -4,7 +4,8 @@ import ReactDOM from "react-dom/client";
 // import Todo from "./Todo";
 // import "./Todo.css";
 // import GetRandomData from "./fetching/GetRandomData";
-import EcommerceData from "./fetching/EcommerceData";
+// import EcommerceData from "./fetching/EcommerceData";
+import SearchMovie from "./netflix/SearchMovie";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     {/* <Counter /> */}
     {/* <Todo /> */}
     {/* <GetRandomData /> */}
-    <EcommerceData />
+    {/* <EcommerceData /> */}
+    <SearchMovie />
   </div>
 );
