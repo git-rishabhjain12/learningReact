@@ -44,10 +44,11 @@ function Todo() {
 
   return (
     <>
-      <h3>ToDo List</h3>
-      <form onSubmit={handleSumbit}>
+      <h3 className="heading">ToDo List</h3>
+      <form onSubmit={handleSumbit} className="form">
         <input
           type="text"
+          className="input"
           placeholder="Enter Your Name"
           autoFocus
           value={inputValue}
@@ -64,7 +65,6 @@ function Todo() {
             >
               {value}
               <DeleteIcon
-                className="deleteBtn"
                 onClick={() => handleDeletion(index)}
               />
               <EditIcon className="editBtn" onClick={() => handleEdit(index)} />

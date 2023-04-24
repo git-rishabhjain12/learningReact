@@ -4,13 +4,30 @@
     box-sizing: border-box;
 }
 
-.deleteBtn {
-    color: black;
+#d1 {
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    height: 100vh;
 }
 
+.heading {
+    font-size: 4rem;
+    color: blueviolet;
+}
+
+.form{
+    margin: 2rem;
+}
+
+.input{
+    display: flex;
+    border: 2px solid green;
+}
 
 .completed {
     text-decoration: line-through;
     color: black;
-    cursor: pointer;;
-  }
+    cursor: pointer;
+    ;
+}
