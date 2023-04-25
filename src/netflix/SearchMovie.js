@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Height } from "@mui/icons-material";
 
 function SearchMovie() {
   const [input, setInput] = useState("");
@@ -44,6 +43,7 @@ function SearchMovie() {
 
   return (
     <>
+    <h3>Movie Search</h3>
       <form onSubmit={handleSumbit}>
         <input
           type="text"
@@ -56,6 +56,7 @@ function SearchMovie() {
       <div style={resultStyle}>
         {movies.map((movie, index) => {
           return (
+            
             <div key={index} style={movieStyle}>
               <div>
                 <img
