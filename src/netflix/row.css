@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* 
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -14,10 +14,12 @@
     position: absolute;
     width: 100%;
 }
-.navBar .loginBtn{
+
+.navBar .loginBtn {
     display: flex;
     justify-content: space-around;
 }
+
 .navBar a {
     font-size: 1.5rem;
     display: flex;
@@ -25,7 +27,7 @@
     text-decoration: none;
     color: red;
     padding-right: 1rem;
-}
+} */
 
 .rows {
     margin: 1 rem;
