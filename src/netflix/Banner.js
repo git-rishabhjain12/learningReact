@@ -28,8 +28,12 @@ function Banner() {
     >
       <div className="banner-container">
         <h1>{banner.title || banner.orginal_name || banner.name}</h1>
-        <a href="">Play</a>
-        <a href="">My List</a>
+        <a href="" className="playBtn">
+          Play
+        </a>
+        <a href="" className="mylistBtn">
+          My List
+        </a>
         <p>{banner.overview}</p>
       </div>
     </div>

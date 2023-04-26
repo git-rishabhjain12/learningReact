@@ -2,16 +2,17 @@ import React from "react";
 import Row from "./Row";
 import requests from "./requests";
 import Banner from "./Banner";
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 
 function Homepage() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Banner />
       <Row
         endpoint={requests.fetchNetflixOriginals}
         heading="Netflix Originals"
+        isBigger={true}
       />
       <Row endpoint={requests.fetchTrending} heading="Trending Movies" />
       <Row endpoint={requests.fetchTopRated} heading="Top Rated Moives" />
