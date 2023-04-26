@@ -13,7 +13,10 @@
     color: red;
     /* position: fixed; */
 }
-
+.navBar .loginBtn{
+    display: flex;
+    justify-content: space-around;
+}
 .navBar a {
     font-size: 1.5rem;
     display: flex;
