@@ -1,12 +1,14 @@
 import React from "react";
 import Row from "./Row";
 import requests from "./requests";
-import Navbar from "./Navbar";
+import Banner from "./Banner";
+// import Navbar from "./Navbar";
 
 function Homepage() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Banner />
       <Row
         endpoint={requests.fetchNetflixOriginals}
         heading="Netflix Originals"

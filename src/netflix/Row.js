@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "./axios";
 import "./row.css";
 
+
 function Row(props) {
   const img_full_path = "https://image.tmdb.org/t/p/original";
   const [movies, setMovies] = useState([]);
-  
+
 
   useEffect(() => {
     axios.get(props.endpoint).then((result) => {
