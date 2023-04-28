@@ -6,7 +6,8 @@ import ReactDOM from "react-dom/client";
 // import GetRandomData from "./fetching/GetRandomData";
 // import EcommerceData from "./fetching/EcommerceData";
 // import SearchMovie from "./netflix/SearchMovie";
-import Homepage from "./netflix/Homepage";
+// import Homepage from "./netflix/Homepage";
+import Home from "./ecommerce/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     {/* <GetRandomData /> */}
     {/* <EcommerceData /> */}
     {/* <SearchMovie /> */}
-    <Homepage />
+    {/* <Homepage /> */}
+    <Home />
   </div>
 );
