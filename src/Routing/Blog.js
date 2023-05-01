@@ -16,7 +16,7 @@ function Blog() {
         return (
           <div className="post" key={post.id}>
             <h2>
-              <Link>{post.title}</Link>
+              <Link to={`/blog/${post.id}`}>{post.title}</Link>
             </h2>
             <p>{post.body}</p>
           </div>

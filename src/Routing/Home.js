@@ -1,11 +1,11 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Main from "./Main";
 import About from "./About";
 import Blog from "./Blog";
 import Contact from "./Contact";
-import { Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SingleBlog from "./SingleBlog";
 
 function Home() {
   return (
@@ -15,6 +15,7 @@ function Home() {
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
