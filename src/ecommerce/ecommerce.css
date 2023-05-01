@@ -51,6 +51,10 @@ header nav ul li a span {
 .products .product img {
     width: 140px;
     height: 100%;
+} 
+
+.products h2{
+    text-align: center;
 }
 
 .products h3 {

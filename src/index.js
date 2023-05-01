@@ -7,7 +7,8 @@ import ReactDOM from "react-dom/client";
 // import EcommerceData from "./fetching/EcommerceData";
 // import SearchMovie from "./netflix/SearchMovie";
 // import Homepage from "./netflix/Homepage";
-import Home from "./ecommerce/Home";
+// import Home from "./ecommerce/Home";
+import Home from "./Routing/Home"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
