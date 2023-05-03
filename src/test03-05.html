@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <script>
+            //Q1 Print reverse of a name (no use of predefined functions)
+
+            let str = "rishabh"
+            let reversed = "";
+
+            function reverseName() {
+                for (let i = str.length - 1; i >= 0; i--) {
+                    reversed = reversed + str[i]
+                }
+                return reversed
+            }
+
+            console.log(reverseName())
+
+
+            let sentence = "Good Morning!!"
+            let reversedStn = ""
+            function reverseSentence() {
+                for (let i = sentence.length - 1; i >= 0; i--) {
+                    reversedStn = reversedStn + sentence[i]
+                }
+                return reversedStn
+            }
+
+            console.log(reverseSentence())
+
+            // find the second highest number from an Array
+
+            let arr = [12, 4, 67, 90, 31, 56, 9]
+
+            // let max = arr[0]
+            // let secondMax = arr[0]
+
+            // for (let i = 1; i < arr.length; i++) {
+            //     // console.log(arr[i])
+            //     if (arr[i] > max) {
+            //         secondMax = max
+            //         max = arr[i]
+            //     }
+            //     else if (arr[i] > secondMax && arr[i] != max) {
+            //         secondMax = arr[i]
+            //     }
+            // }
+
+            // console.log(secondMax)
+
+
+            // second option
+
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] > arr[j]) {
+                        let temp = arr[i]
+                        arr[i] = arr[j]
+                        arr[j] = temp
+                    }
+                }
+            }
+
+            console.log(arr[arr.length - 2])
+
+            // ***********************************************************************
+
+            const obj = {
+                a: 10000,
+                b: 6000,
+                c: 750000,
+                d: 1000000
+            }
+
+
+            let valuesArr = Object.values(obj)
+            for (let i = 0; i < valuesArr.length; i++) {
+                for (let j = 1; j < valuesArr.length; j++) {
+                    if (valuesArr[i] > valuesArr[j]) {
+                        let temp = valuesArr[i]
+                        valuesArr[i] = valuesArr[j]
+                        valuesArr[j] = temp
+                    }
+                }
+            }
+
+            const secondHighestSalary = valuesArr[valuesArr.length - 2]
+            for (let x in obj) {
+                if (obj[x] === secondHighestSalary) {
+                    console.log(x + ":" + obj[x])
+                }
+            }
+
+            // *********************************************************************************
+
+
+            // for such input : ["australia", "costa rica", "brazil", "afghanistan", "india", "indonesia", "spain", "sweden"]
+
+            // {
+            //     a: ["australia", "afghanistan"],
+            //     b: ["brazil"],
+            //     c: ["costa rica"],
+            //     i: ["india", "indonesia"],
+            //     s: ["spain", "sweden"]
+            // }
+
+            cons
+            t input = ["australia", "costa rica", "brazil", "afghanistan", "india", "indonesia", "spain", "sweden"]
+            const groups = {}
+
+            for (let word of input) {
+                const firstLetter = word[0]
+                if (!groups[firstLetter]) {
+                    groups[firstLetter] = [word]
+                }
+                else {
+                    groups[firstLetter].push(word)
+                }
+            }
+            console.log(groups)
+
+
+        </script>
+    </div>
+</body>
+
+</html>
