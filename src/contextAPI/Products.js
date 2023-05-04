@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { ecommerceContext } from "./First";
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  const { cart, setCart } = useContext(ecommerceContext);
+
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((result) => {
       console.log(result.data);
@@ -11,9 +13,9 @@ function Products() {
     });
   }, []);
 
-  function handleAddToCart(e, id) {
+  function handleAddToCart(e, product) {
     e.preventDefault();
-    setCart([...cart, products[id]]);
+    setCart([...cart, product]);
   }
 
   console.log(cart);
@@ -30,15 +32,14 @@ function Products() {
 
   return (
     <>
-      <div className="products-container">
+      <section className="products">
         <h2>Products</h2>
-        <div className="products">
+        <div className="products-container">
           {products.map((product, index) => {
             return (
               <div className="product" key={index}>
                 <img src={product.image} alt={product.title} />
                 <h3>{product.title}</h3>
-                {/* <h3>{"$ " + product.price}</h3> */}
                 <h3>
                   {existInCart(product.id) ? (
                     <a href="" className="addedToCart">
@@ -48,8 +49,8 @@ function Products() {
                     <a
                       href=""
                       className="addToCart"
-                      onClick={(e) => handleAddToCart(e, index)}
-                   >
+                      onClick={(e) => handleAddToCart(e, product)}
+                    >
                       Add to Cart
                     </a>
                   )}
@@ -58,7 +59,7 @@ function Products() {
             );
           })}
         </div>
-      </div>
+      </section>
     </>
   );
 }

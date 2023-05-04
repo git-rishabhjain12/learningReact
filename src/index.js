@@ -8,7 +8,8 @@ import ReactDOM from "react-dom/client";
 // import SearchMovie from "./netflix/SearchMovie";
 // import Homepage from "./netflix/Homepage";
 // import Home from "./ecommerce/Home";
-import Home from "./Routing/Home";
+// import Home from "./Routing/Home";.
+import First from "./contextAPI/First";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +20,7 @@ root.render(
     {/* <EcommerceData /> */}
     {/* <SearchMovie /> */}
     {/* <Homepage /> */}
-    <Home />
+    {/* <Home /> */}
+    <First />
   </div>
 );

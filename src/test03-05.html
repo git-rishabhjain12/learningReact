@@ -113,22 +113,36 @@
             //     s: ["spain", "sweden"]
             // }
 
-            cons
-            t input = ["australia", "costa rica", "brazil", "afghanistan", "india", "indonesia", "spain", "sweden"]
+            const input = ["australia", "costa rica", "brazil", "afghanistan", "india", "indonesia", "spain", "sweden"]
             const groups = {}
 
-            for (let word of input) {
-                const firstLetter = word[0]
-                if (!groups[firstLetter]) {
-                    groups[firstLetter] = [word]
+            // for (let word of input) {
+            //     const firstLetter = word[0]
+            //     if (!groups[firstLetter]) {
+            //         groups[firstLetter] = [word]
+            //     }
+            //     else {
+            //         groups[firstLetter].push(word)
+            //     }
+            // }
+            // console.log(groups)
+
+
+            for (let i = 0; i < input.length; i++) {
+                let word = input[i]
+                // console.log(word)
+                let firstWord = word[0]
+                // console.log(firstWord)
+
+                if (!groups[firstWord]) {
+                    groups[firstWord] = [word]
                 }
-                else {
-                    groups[firstLetter].push(word)
-                }
+                else (
+                    groups[firstWord].push(word)
+                )
             }
+
             console.log(groups)
-
-
         </script>
     </div>
 </body>
