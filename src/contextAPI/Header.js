@@ -5,6 +5,7 @@ import { useContext } from "react";
 function Header() {
   const { cart } = useContext(ecommerceContext);
   return (
+    <>
     <header>
       <h1>Ecommerce</h1>
       <nav>
@@ -20,6 +21,11 @@ function Header() {
         </ul>
       </nav>
     </header>
+
+    <header>
+    
+    </header>
+    </>
   );
 }
 

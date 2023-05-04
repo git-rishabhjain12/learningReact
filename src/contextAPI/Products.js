@@ -40,7 +40,7 @@ function Products() {
               <div className="product" key={index}>
                 <img src={product.image} alt={product.title} />
                 <h3>{product.title}</h3>
-                <h3>
+                <h4>
                   {existInCart(product.id) ? (
                     <a href="" className="addedToCart">
                       Added to cart
@@ -54,7 +54,7 @@ function Products() {
                       Add to Cart
                     </a>
                   )}
-                </h3>
+                </h4>
               </div>
             );
           })}

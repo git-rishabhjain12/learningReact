@@ -5,6 +5,7 @@ import About from "./About";
 import Header from "./Header";
 import Products from "./Products";
 import Cart from "./Cart";
+import "./ecommerce.css"
 export const ecommerceContext = createContext({});
 
 function First() {
