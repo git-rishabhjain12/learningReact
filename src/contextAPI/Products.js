@@ -44,6 +44,7 @@ function Products() {
                   {existInCart(product.id) ? (
                     <a href="" className="addedToCart">
                       Added to cart
+                      
                     </a>
                   ) : (
                     <a
