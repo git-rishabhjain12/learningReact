@@ -22,10 +22,10 @@ function Header() {
       </nav>
     </header>
 
-    <header>
+    {/* <header>
 
     
-    </header>
+    </header> */}
     </>
   );
 }

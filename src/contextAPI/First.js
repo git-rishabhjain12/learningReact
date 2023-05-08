@@ -5,11 +5,16 @@ import About from "./About";
 import Header from "./Header";
 import Products from "./Products";
 import Cart from "./Cart";
-import "./ecommerce.css"
+import "./ecommerce.css";
 export const ecommerceContext = createContext({});
 
 function First() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("products")) !== null
+      ? JSON.parse(localStorage.getItem("products"))
+      : []
+  );
+
   return (
     <>
       <ecommerceContext.Provider value={{ cart, setCart }}>

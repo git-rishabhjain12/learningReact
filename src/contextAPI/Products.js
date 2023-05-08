@@ -7,6 +7,10 @@ function Products() {
   const { cart, setCart } = useContext(ecommerceContext);
 
   useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(cart));
+  },[cart]);
+
+  useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((result) => {
       console.log(result.data);
       setProducts(result.data);
@@ -14,11 +18,13 @@ function Products() {
   }, []);
 
   function handleAddToCart(e, product) {
+    console.log(product)
     e.preventDefault();
     setCart([...cart, product]);
   }
+  console.log(cart)
 
-  console.log(cart);
+  
 
   function existInCart(productID) {
     let exist = false;
@@ -44,7 +50,6 @@ function Products() {
                   {existInCart(product.id) ? (
                     <a href="" className="addedToCart">
                       Added to cart
-                      
                     </a>
                   ) : (
                     <a
