@@ -9,8 +9,9 @@ import ReactDOM from "react-dom/client";
 // import Homepage from "./netflix/Homepage";
 // import Home from "./ecommerce/Home";
 // import Home from "./Routing/Home";.
-import First from "./contextAPI/First";
+// import First from "./contextAPI/First";
 // import First from "./weatherApp/First";
+import Home from "./IncrementONRefresh/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
     {/* <SearchMovie /> */}
     {/* <Homepage /> */}
     {/* <Home /> */}
-    <First />
+    {/* <First /> */}
+    <Home />
   </div>
 );

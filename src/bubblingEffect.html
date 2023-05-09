@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling & Capturing</title>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">
+            <button id="btn">Click me!</button>
+        </div>
+    </div>
+    <script>
+
+        const outer = document.getElementById("outer");
+        const inner = document.getElementById("inner");
+        const btn = document.getElementById("btn");
+
+        outer.addEventListener("click", () => {
+            // setTimeout(() => console.log("Outer div clicked"), 5000)
+            console.log("Outer div clicked");
+        });
+
+        inner.addEventListener("click", () => {
+            // setTimeout(() => console.log("Inner div clicked"),5000)
+            console.log("Inner div clicked")
+        });
+
+        btn.addEventListener("click", () => {
+            console.log("Button clicked");
+        });
+
+    </script>
+</body>
+
+</html>

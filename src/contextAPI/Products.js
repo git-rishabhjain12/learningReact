@@ -8,7 +8,7 @@ function Products() {
 
   useEffect(() => {
     localStorage.setItem("products", JSON.stringify(cart));
-  },[cart]);
+  }, [cart]);
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((result) => {
@@ -18,13 +18,11 @@ function Products() {
   }, []);
 
   function handleAddToCart(e, product) {
-    console.log(product)
+    // console.log(product)
     e.preventDefault();
     setCart([...cart, product]);
   }
-  console.log(cart)
-
-  
+  console.log(cart);
 
   function existInCart(productID) {
     let exist = false;
