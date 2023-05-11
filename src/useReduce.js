@@ -1,13 +1,15 @@
-import React, {useState, useReducer } from "react";
+import React, { useState, useReducer } from "react";
 
 const initialState = { count: 0 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1 };
+    //   return { count: state.count + 1};
+      return { count: state.count + action.payload };
     case "decrement":
-      return { count: state.count - 1 };
+    //   return { count: state.count - 1 };
+      return { count: state.count - action.payload };
     default:
       throw new Error();
   }
@@ -19,8 +21,14 @@ function Counter() {
   return (
     <div>
       <p>Count: {state.count}</p>
-      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
+      {/* <button onClick={() => dispatch({ type: "increment"})}> */}
+      <button onClick={() => dispatch({ type: "increment", payload: 1 })}>
+        Increment
+      </button>
+      {/* <button onClick={() => dispatch({ type: "decrement"})}> */}
+      <button onClick={() => dispatch({ type: "decrement", payload: 1 })}>
+        Decrement
+      </button>
     </div>
   );
 }
@@ -54,7 +62,6 @@ function Counter() {
 //     </div>
 //   );
 // }
-
 
 // const initialState = { items: [] };
 
@@ -105,6 +112,5 @@ function Counter() {
 //     </div>
 //   );
 // }
-
 
 export default Counter;
