@@ -12,7 +12,8 @@ import ReactDOM from "react-dom/client";
 // import First from "./contextAPI/First";
 // import First from "./weatherApp/First";
 // import Home from "./IncrementONRefresh/Home";
-import Counter from "./useReduce";
+// import Counter from "./useReduce";
+import Home from "./DogsAPI/Home"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,7 +26,7 @@ root.render(
     {/* <Homepage /> */}
     {/* <Home /> */}
     {/* <First /> */}
-    {/* <Home /> */}
-    <Counter />
+    <Home />
+    {/* <Counter /> */}
   </div>
 );

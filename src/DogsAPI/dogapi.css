@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: lightgrey;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header .heading{
+    font-size: 3rem;
+    padding: 0 10px;
+}
+
