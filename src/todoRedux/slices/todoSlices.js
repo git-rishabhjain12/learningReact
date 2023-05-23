@@ -19,9 +19,13 @@ export const todoSlice = createSlice({
     },
 
     deleteTask: (state, action) => {
-      state.tasks = state.tasks.filter((task, index) => {
-        return index !== action.payload;
-      });
+      const deleteIndex = action.payload;
+      state.tasks = state.tasks.filter(
+        (task, index) => index !== action.payload
+      );
+      state.complete = state.complete.filter(
+        (index) => index !== action.payload
+      );
     },
 
     editTask: (state, action) => {
