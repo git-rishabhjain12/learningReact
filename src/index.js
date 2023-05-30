@@ -16,11 +16,12 @@ import ReactDOM from "react-dom/client";
 // import Home from "./DogsAPI/Home"
 // import Main from "./loginForm/Main";
 // import Home from "./counterRedux/Home";
-import { Provider } from "react-redux";
 // import store from "./counterRedux/store";
-import Home from "./todoRedux/Home";
+// import Home from "./todoRedux/Home";
+// import Home from "./randomUserRedux/Home"
 import store from "./todoRedux/store";
-
+import { Provider } from "react-redux";
+import Home from "./ecommerceUsingRedux/Home";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div id="d1">
